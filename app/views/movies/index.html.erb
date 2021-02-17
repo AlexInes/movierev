@@ -2,7 +2,7 @@
   <section class="movie">
     <div class="summary">
       <h2>
-        <strong><%= movie.title %></strong> || <small>Released: <%= movie.release_date%></small><br>
+        <strong><%= link_to movie.title, movie_path(movie) %></strong> || <small>Released: <%= movie.release_date%></small><br>
       </h2>
       <h3>
         <%= movie.directed_by %>
