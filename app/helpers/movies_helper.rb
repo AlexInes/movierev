@@ -1,7 +1,11 @@
 module MoviesHelper
 
-  def display_total_gross(gross)
-    gross.flop? ? "Flop!" : number_to_currency(gross, )
+  def display_total_gross(movie)
+    movie.flop? ? "Flop!" : number_to_currency(movie.total_gross,  precision: 0)
     
+  end
+
+  def year_of(movie)
+    movie.release_date.year
   end
 end
